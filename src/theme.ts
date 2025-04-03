@@ -3,12 +3,13 @@ import { createTheme, responsiveFontSizes } from "@mui/material";
 let theme = createTheme({
     palette: {
         primary: {
-            main: "#F5F3F5",
+            main: "#919192",
 
         },
         secondary: {
-            main: "#051424",
-        }, //#7713bd hover
+            main: "#7713bd",
+        },
+
     },
     typography: {
         fontFamily: "Helvetica Neue"
