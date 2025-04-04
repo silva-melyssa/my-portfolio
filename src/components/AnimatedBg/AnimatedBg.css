@@ -1,0 +1,72 @@
+body {
+    background-color: #181818 !important;
+}
+
+.parallelogram {
+    transform: skew(-40deg);
+    position: absolute;
+    z-index: -9;
+}
+
+#one {
+    width: 20px;
+    height: 300px;
+    animation: moveBar 15s linear infinite;
+    box-shadow: 100px 509px #612271, 20px 300px #612271, -120px 150px #612271;
+}
+
+#two {
+    width: 10px;
+    height: 300px;
+    animation: moveBar 30s linear infinite;
+    box-shadow: 250px 450px #43174F, -50px 200px #43174F;
+}
+
+#three {
+    width: 10px;
+    height: 500px;
+    animation: moveBar 20s linear infinite;
+    box-shadow: 70px 500px #7B5C83, -100px 200px #7B5C83;
+}
+
+#seven {
+    width: 18px;
+    /* Reduced width */
+    height: 250px;
+    /* Adjusted height */
+    animation: moveBar 20s linear infinite;
+    box-shadow: 250px 550px #7B3F8C, 150px 500px #7B3F8C, -250px 400px #7B3F8C;
+}
+
+#eight {
+    width: 15px;
+    /* Reduced width */
+    height: 300px;
+    /* Adjusted height */
+    animation: moveBar 26s linear infinite;
+    box-shadow: 350px 600px #7D3A90, -150px 500px #7D3A90, 100px 400px #7D3A90;
+}
+
+#nine {
+    width: 12px;
+    /* Reduced width */
+    height: 350px;
+    /* Adjusted height */
+    animation: moveBar 22s linear infinite;
+    box-shadow: 300px 700px #9B2E72, -100px 450px #9B2E72;
+}
+
+#ten {
+    width: 18px;
+    /* Reduced width */
+    height: 250px;
+    /* Adjusted height */
+    animation: moveBar 30s linear infinite;
+    box-shadow: 150px 350px #8B4C9F, 0px 250px #8B4C9F, 50px 350px #8B4C9F;
+}
+
+@keyframes moveBar {
+    100% {
+        transform: skew(-40deg) translateY(-1000px);
+    }
+}
