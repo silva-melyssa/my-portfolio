@@ -7,10 +7,16 @@ import AnimatedBg from "../../../../components/AnimatedBg/AnimetedBg";
 
 const Hero = () => {
 
-    const StyledHero = styled("div")(() => ({
+    const StyledHero = styled("div")(({ theme }) => ({
         height: "100vh",
         display: "flex",
         alignItems: "center",
+        [theme.breakpoints.up('xs')]: {
+            paddingTop: "100px"
+        },
+        [theme.breakpoints.up('md')]: {
+            paddingTop: "0px"
+        },
     }))
 
     const StyledImg = styled("img")(({ theme }) => ({
@@ -27,8 +33,11 @@ const Hero = () => {
                 <AnimatedBg />
 
                 <Container maxWidth="lg">
-                    <Grid container spacing={2}>
-                        <Grid size={{ xs: 12, md: 5 }}>
+                    <Grid container spacing={2}
+                        alignItems="center">
+                        <Grid size={{ xs: 12, md: 5 }} display="flex"
+                            p={{ xs: 1, md: 2 }}
+                        >
                             <StyledImg src={Avatar} />
                         </Grid>
                         <Grid size={{ xs: 12, md: 7 }}>
@@ -37,13 +46,14 @@ const Hero = () => {
                             <Typography color="secondary.light" variant="h2" textAlign="center" sx={{ fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }, fontWeight: 'bold' }}>Computer Science Student</Typography>
                             <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid component="div" size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={() => console.log("download")}
+                                    >
                                         <DownloadIcon />
                                         <Typography>Download CV</Typography>
                                     </StyledButton>
                                 </Grid>
                                 <Grid component="div" size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
-                                    <StyledButton>
+                                    <StyledButton onClick={() => console.log("contact")}>
                                         <EmailIcon />
                                         <Typography>Contact me</Typography>
                                     </StyledButton>

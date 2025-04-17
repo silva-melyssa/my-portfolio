@@ -1,10 +1,11 @@
 import { styled } from "@mui/material"
-import { ReactNode } from "react"
+import { MouseEventHandler, ReactNode } from "react"
 
 interface StyledButtonProps {
     children: ReactNode
+    onClick: MouseEventHandler<HTMLButtonElement>
 }
-const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
+const StyledButton: React.FC<StyledButtonProps> = ({ children, onClick }) => {
 
     const StyledButton = styled("button")(({ theme }) => ({
         backgroundColor: "transparent",
@@ -25,7 +26,7 @@ const StyledButton: React.FC<StyledButtonProps> = ({ children }) => {
 
     return (
         <>
-            <StyledButton>
+            <StyledButton onClick={onClick}>
                 {children}
             </StyledButton>
         </>
