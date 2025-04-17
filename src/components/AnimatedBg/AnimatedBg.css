@@ -1,11 +1,13 @@
 body {
     background-color: #181818 !important;
+
 }
 
 .parallelogram {
     transform: skew(-40deg);
     position: absolute;
     z-index: -9;
+
 }
 
 #one {
