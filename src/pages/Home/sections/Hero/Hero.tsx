@@ -32,10 +32,10 @@ const Hero = () => {
                             <StyledImg src={Avatar} />
                         </Grid>
                         <Grid size={{ xs: 12, md: 7 }}>
-                            <Typography color="primary.contrastText" variant="h1" textAlign="center">Melyssa Silva</Typography>
+                            <Typography color="primary.contrastText" variant="h1" textAlign="center" pb={2}>Melyssa Silva</Typography>
                             <Typography color="secondary.light" variant="h2" textAlign="center" sx={{ fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }, fontWeight: 'bold' }}>Software Developer |</Typography>
                             <Typography color="secondary.light" variant="h2" textAlign="center" sx={{ fontSize: { xs: '1.5rem', sm: '1.75rem', md: '2rem' }, fontWeight: 'bold' }}>Computer Science Student</Typography>
-                            <Grid container display="flex" justifyContent="center" spacing={3}>
+                            <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                                 <Grid component="div" size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
                                     <StyledButton>
                                         <DownloadIcon />
